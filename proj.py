@@ -25,6 +25,8 @@ pictures.append(im8)                              ##
 im9 = makePicture(fldr + "9.png")                 ##
 pictures.append(im9)                              ##
                                                   ##
+width = getWidth (im1)                            ##
+height = getHeight (im1)                          ##
 finpic = makeEmptyPicture(width,height)           ##Creates a blank picture that will be where the new pixels are placed
 
 ##############################
