@@ -1,3 +1,15 @@
+#############
+## CREDITS ##
+#############
+
+##Project by: Kailey Sarmiento
+##Team: 15, Group: C
+##Team Members: Anthony Avina & Israel Andrade (Thank you both for all your help!)
+##TA: Lesly Garcia Jimenez (Thank you for your help!)
+##CST 231, Professor Avner Biblarz, Spring 2016
+
+##GitHub repository: https://github.com/kailey-jo/ProjectOne
+
 ####################
 ##LOADING PICTURES##
 ####################
@@ -6,7 +18,7 @@ pictures = []                                     ##Creates the list pictures
 fldr = "c:/Users/Kailey/Desktop/CST205PR1/"       ##pathway to pictures I want
                                                   ##
                                                   ##
-im1 = makePicture(fldr + "1.png")                 ##Lines 9-26: Making picture objects from pathway files
+im1 = makePicture(fldr + "1.png")                 ##Lines 21-38: Making picture objects from pathway files
 pictures.append(im1)                              ##and appending them (adding them) the the pictures list created earlier
 im2 = makePicture(fldr + "2.png")                 ##
 pictures.append(im2)                              ##
@@ -25,8 +37,8 @@ pictures.append(im8)                              ##
 im9 = makePicture(fldr + "9.png")                 ##
 pictures.append(im9)                              ##
                                                   ##
-width = getWidth (im1)                            ##
-height = getHeight (im1)                          ##
+width = getWidth (im1)                            ##Width of the final picture
+height = getHeight (im1)                          ##Height of the final picture
 finpic = makeEmptyPicture(width,height)           ##Creates a blank picture that will be where the new pixels are placed
 
 ##############################
@@ -48,15 +60,15 @@ for x in range (0,width):                         ##Following code will loop as 
       greenpx = getGreen(pix)                     ##Stores G value of the RGB value into the variable greenpx
       bluepx = getBlue(pix)                       ##Stores B value of the RGB value into the variable bluepx
                                                   ##
-      redpixl.append(redpx)                       ##Lines49-51 store the RGB values obtained into the corresponding lists
+      redpixl.append(redpx)                       ##Lines63-65 store the RGB values obtained into the corresponding lists
       grpixl.append(greenpx)                      ##
       blupixl.append(bluepx)                      ##
                                                   ##
-    redpixl.sort()                                ##Lines 53-55 sorts the values in each list from smallest to largest value
+    redpixl.sort()                                ##Lines 67-69 sorts the values in each list from smallest to largest value
     grpixl.sort()                                 ##
     blupixl.sort()                                ##
                                                   ##
-    rlength = len(redpixl)                        ##Lines 57-59 determines the length of each list and stores that value into
+    rlength = len(redpixl)                        ##Lines 71-73 determines the length of each list and stores that value into
     glength = len(grpixl)                         ##the corresponding variable. This is important for determining what value
     blength = len(blupixl)                        ##is the median value for each pixel.
 
@@ -80,13 +92,3 @@ for x in range (0,width):                         ##Following code will loop as 
 #################
 
 show (finpic)              ##The final picture (without the pesky tourist) is displayed
-
-#############
-## CREDITS ##
-#############
-
-##Project by: Kailey Sarmiento
-##Team: 15, Group: C
-##Team Members: Anthony Avina & Israel Andrade (Thank you both for all your help!)
-##TA: Lesly Garcia Jimenez (Thank you for your help!)
-##CST 231, Spring 2016
